@@ -1,0 +1,95 @@
+{% extends 'nav.html' %}
+{% load static %}
+
+{% block title %}
+    TechnoVerse | SignUp
+{% endblock title %}
+
+{% block style %}
+    <style>
+        .btn{
+            font-family: "Raleway", Sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            letter-spacing: 1px;
+            display: inline-block;
+            padding: 10px 30px;
+            border-radius: 50px;
+            transition: 0.5px;
+            color: #3498db;
+            border: 2px solid #3498db;
+        }
+
+        .btn:hover{
+            color:#fff;
+            background-color: #3498db;
+        }
+    </style>
+{% endblock style %}
+
+{% block form %}
+<p>
+    <br>
+</p>
+<p>
+    <br>
+    <br>
+</p>
+<section id="contact" class="contact">
+    <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+            <h1 data-aos="fade-up">SignUp</h1>
+            <br>
+            <div class='container' data-aos='fade-up' data-aos-delay='400'>
+                {% for message in messages %} 
+                <div class="alert alert-{{message.tags}} fade show" role="alert">
+                    <strong></strong>{{message}}
+                </div>
+                {% endfor %}
+                <form action="/app_auth/signup/" method="post"> {% csrf_token %}
+                    <div class="form-group" data-aos="fade-up" data-aos-delay="600">
+                        <input type="text" class="form-control" id="username" name="username" placeholder="Username" required>
+                    </div>
+                    <br>
+                    <div class="form-group" data-aos="fade-up" data-aos-delay="600">
+                        <input type="email" class="form-control" name = "email" id="email" placeholder="E-mail Address" aria-describedby="emailHelp" required>
+                    </div>
+                    <br>
+                    <div class="form-group" data-aos="fade-up" data-aos-delay="600">
+                        <input type="password" class="form-control" id = "passwd1" name = "passwd1" placeholder="Password" required>
+                    </div>
+                    <br>
+                    <div class="form-group" data-aos="fade-up" data-aos-delay="600">
+                        <input type="password" class="form-control" id = "passwd2" name = "passwd2" placeholder="Confirm Password" required>
+                    </div>
+                    <br>
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="800" >
+                        <button type="submit" class="btn">SignUp</button>  
+                    </div>
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="800" >
+                        <p>Already have an Account?<a href="/app_auth/signin"> SignIn </a></p>  
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</section>
+
+{% endblock form %}
+
+{% block img %}
+<div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left" data-aos-delay="200">
+    <br>
+    <br>
+    <br>
+
+    <br>
+    <br>
+    <br>
+    <img src= {% static "assets/img/hero-img.png" %} class="img-fluid animated" alt="">
+</div>
+{% endblock img %}
+
+

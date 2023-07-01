@@ -1,0 +1,24 @@
+{% autoescape off %}
+
+Dear {{user.username}},
+
+We have received a request to reset your password for your Django Project account. To proceed with the password reset, please click the link below:
+
+http://{{domain}}{% url 'set-new-passwd' uidb64=uid token=token %}
+
+Please note that this link is valid for a limited time and will expire after 10mins. If you do not reset your password within this time frame, you will need to initiate the reset process again.
+
+If you did not request a password reset, please ignore this email. Rest assured, your account remains secure.
+
+For security purposes, it is important to keep your password confidential and avoid sharing it with anyone. Make sure to choose a strong and unique password that is not easily guessable.
+
+If you encounter any issues or need further assistance, please don't hesitate to contact me at jeswinjosephj@outlook.com
+
+Thank you for using TechnoVerse.
+
+Best regards,
+
+Jeswin Joseph J
+TechnoVerse
+
+{% endautoescape %}

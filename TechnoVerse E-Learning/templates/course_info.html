@@ -1,0 +1,224 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+    TechnoVerse | Course Details
+{% endblock title %}
+
+{% block 'image' %}
+
+{% if name == "tech-1" %}
+    <img src={% static "assets/img/courses/tech-1.png" %} alt="" style= "height : auto; width: 764px; margin-top :60px;">
+{% elif name == "tech-2" %}
+    <img src={% static "assets/img/courses/tech-2.png" %} alt="" style= "height : auto; width: 764px; margin-top :60px;">
+{% elif name == "tech-3" %}
+    <img src={% static "assets/img/courses/tech-3.png" %} alt="" style= "height : auto; width: 764px; margin-top :60px;">
+{% elif name == "fintech-1" %}
+    <img src={% static "assets/img/courses/fintech-1.png" %} alt="" style= "height : auto; width: 764px; margin-top :60px;">
+{% elif name == "fintech-2" %}
+    <img src={% static "assets/img/courses/fintech-2.png" %} alt="" style= "height : auto; width: 764px; margin-top :60px;">
+{% elif name == "fintech-3" %}
+    <img src={% static "assets/img/courses/fintech-3.png" %} alt="" style= "height : auto; width: 764px; margin-top :60px;">
+{% elif name == "arts-1" %}
+    <img src={% static "assets/img/courses/arts-1.png" %} alt="" style= "height : auto; width: 764px; margin-top :60px;">
+{% elif name == "arts-2" %}
+    <img src={% static "assets/img/courses/arts-2.png" %} alt="" style= "height : auto; width: 764px; margin-top :60px;">
+{% elif name == "arts-3" %}
+    <img src={% static "assets/img/courses/arts-3.png" %} alt="" style= "height : auto; width: 764px; margin-top :60px;">
+{% endif %}
+    
+{% endblock 'image' %}
+
+{% block course_info %}
+
+        {% if name == "tech-1" %}
+        <div class="portfolio-info">
+            <h3>Advanced Data Visualization Techniques: Mastering Visual Storytelling</h3>
+            <ul>
+                <li><strong>Category</strong>: Data Science</li>
+                <li><strong>Offered By</strong>: Panimalar Engineering College</li>
+                <li><strong>Start date</strong>: 1st August, 2023</li>
+                <li><strong>Course duration</strong>: 3 Months</li>
+            </ul>
+        </div>
+        <div class="portfolio-description">
+            <h2>Insights of the Course</h2>
+            <p style = "text-align: justify; text-indent: 2em;">
+                Master the art of visual storytelling with advanced data visualization techniques in this course. Learn to effectively communicate complex data insights through compelling and engaging visualizations. 
+            </p>
+            <p style = "text-align: justify; text-indent: 2em;">
+                Enhance your skills in selecting chart types, incorporating interactivity, and crafting impactful narratives. Gain the ability to transform raw data into captivating visual stories that drive understanding and decision-making.
+            </p>
+        </div>
+
+
+        {% elif name == "tech-2" %}
+        <div class="portfolio-info">
+            <h3>Wireless Network Hacking: Exploiting and Securing Wi-Fi Networks</h3>
+            <ul>
+                <li><strong>Category</strong>: Cyber Security</li>
+                <li><strong>Offered By</strong>: Harvard University</li>
+                <li><strong>Start date</strong>: 1st August, 2023</li>
+                <li><strong>Course duration</strong>: 2 Months</li>
+            </ul>
+        </div>
+        <div class="portfolio-description">
+            <h2>Insights of the Course</h2>
+            <p style = "text-align: justify; text-indent: 2em;">
+                Discover the world of wireless network security in the "Wireless Network Hacking: Exploiting and Securing Wi-Fi Networks" course. Gain hands-on skills to identify vulnerabilities and understand hacker techniques.
+            </p>
+            <p style = "text-align: justify; text-indent: 2em;">
+                Explore attack vectors and learn countermeasures to enhance Wi-Fi network security. Become an invaluable asset in cybersecurity with the ability to assess and secure Wi-Fi networks.
+            </p>
+        </div>
+
+
+        {% elif name == "tech-3" %}
+        <div class="portfolio-info">
+            <h3>Blockchain Fundamentals: Understanding the Technology Behind Cryptocurrencies</h3>
+            <ul>
+                <li><strong>Category</strong>: Blockchain</li>
+                <li><strong>Offered By</strong>: Indian Institute of Technology, Madras</li>
+                <li><strong>Start date</strong>: 1st September, 2023</li>
+                <li><strong>Course duration</strong>: 6 Months</li>
+            </ul>
+        </div>
+        <div class="portfolio-description">
+            <h2>Insights of the Course</h2>
+            <p style = "text-align: justify; text-indent: 2em;">
+                Unlock the power of blockchain in this course that dives deep into the technology behind cryptocurrencies. Gain a comprehensive understanding of blockchain, exploring its fundamental concepts, underlying mechanisms, and real-world applications.
+            </p>
+            <p style = "text-align: justify; text-indent: 2em;">
+                By the course's end, you'll be equipped with the knowledge to navigate the exciting world of blockchain and harness its transformative capabilities. Explore the potential of blockchain technology, its impact on various industries, and how it has revolutionized the way transactions are conducted.</p>
+        </div>
+
+
+        {% elif name == "fintech-1" %}
+        <div class="portfolio-info">
+            <h3>Financial Data Analysis with Python: Extracting Insights for Decision Making</h3>
+            <ul>
+                <li><strong>Category</strong>: Fintech</li>
+                <li><strong>Offered By</strong>: Indian Institute of Technology, Madras</li>
+                <li><strong>Start date</strong>: 1st September, 2023</li>
+                <li><strong>Course duration</strong>: 6 Months</li>
+            </ul>
+        </div>
+        <div class="portfolio-description">
+            <h2>Insights of the Course</h2>
+            <p style = "text-align: justify; text-indent: 2em;">
+                Unleash the power of Python in financial data analysis with the "Financial Data Analysis with Python: Extracting Insights for Decision Making" course. Acquire essential skills to manipulate, visualize, and analyze financial data using Python programming language and its libraries.
+            </p>
+            <p style = "text-align: justify; text-indent: 2em;">
+                Harness the potential of Python and its versatile libraries to analyze financial data, make data-driven decisions, and gain a competitive edge in the financial industry.
+            </p>
+            </div>
+
+
+        {% elif name == "fintech-2" %}
+        <div class="portfolio-info">
+            <h3>Fintech Entrepreneurship: Building and Scaling Innovative Financial Solutions</h3>
+            <ul>
+                <li><strong>Category</strong>: Fintech</li>
+                <li><strong>Offered By</strong>: Indian Institute of Technology, Madras</li>
+                <li><strong>Start date</strong>: 1st September, 2023</li>
+                <li><strong>Course duration</strong>: 6 Months</li>
+            </ul>
+        </div>
+        <div class="portfolio-description">
+            <h2>Insights of the Course</h2>
+            <p style = "text-align: justify; text-indent: 2em;">
+                Embark on an entrepreneurial journey in the world of fintech with the "Fintech Entrepreneurship: Building and Scaling Innovative Financial Solutions" course. Develop the skills and knowledge needed to create, launch, and scale groundbreaking financial solutions that disrupt the industry.
+            </p>
+            <p style = "text-align: justify; text-indent: 2em;">
+                Learn how to build and scale innovative financial solutions, navigate regulatory challenges, and create sustainable business models that drive success.
+            </p>
+        </div>
+
+
+        {% elif name == "fintech-3" %}
+        <div class="portfolio-info">
+            <h3>Strategic Pricing and Revenue Management: Maximizing Profitability</h3>
+            <ul>
+                <li><strong>Category</strong>: Commerce</li>
+                <li><strong>Offered By</strong>: Indian Institute of Technology, Madras</li>
+                <li><strong>Start date</strong>: 1st September, 2023</li>
+                <li><strong>Course duration</strong>: 6 Months</li>
+            </ul>
+        </div>
+        <div class="portfolio-description">
+            <h2>Insights of the Course</h2>
+            <p style = "text-align: justify; text-indent: 2em;">
+                Master the art of strategic pricing and revenue management in the "Strategic Pricing and Revenue Management: Maximizing Profitability" course. Explore advanced techniques and best practices to optimize pricing strategies and drive maximum profitability for your business.
+            </p>
+            <p style = "text-align: justify; text-indent: 2em;">
+                Discover the key principles and advanced tactics to maximize profitability through effective pricing strategies, demand forecasting, and revenue optimization techniques.
+            </p>
+        </div>
+
+
+        {% elif name == "arts-1" %}
+        <div class="portfolio-info">
+            <h3>Advanced Calculus: Exploring the Beauty and Applications of Mathematical Analysis</h3>
+            <ul>
+                <li><strong>Category</strong>: Mathematics</li>
+                <li><strong>Offered By</strong>: Indian Institute of Technology, Madras</li>
+                <li><strong>Start date</strong>: 1st September, 2023</li>
+                <li><strong>Course duration</strong>: 6 Months</li>
+            </ul>
+        </div>
+        <div class="portfolio-description">
+            <h2>Insights of the Course</h2>
+            <p style = "text-align: justify; text-indent: 2em;">
+                Dive into the fascinating world of Advanced Calculus in the course "Exploring the Beauty and Applications of Mathematical Analysis." Delve deeper into the elegance and power of mathematical analysis as you explore complex functions, limits, derivatives, integrals, and their applications.
+            </p>
+            <p style = "text-align: justify; text-indent: 2em;">
+                Gain a deeper understanding of mathematical analysis through a study of complex functions, limits, derivatives, integrals, and their real-world implications. Expand your mathematical horizons and develop a new appreciation for the elegance of calculus.
+            </p>
+        </div>
+
+
+        {% elif name == "arts-2" %}
+        <div class="portfolio-info">
+            <h3>Einstein's Equation Demystified: Unveiling the Secrets of E=mc²</h3>
+            <ul>
+                <li><strong>Category</strong>: Physics</li>
+                <li><strong>Offered By</strong>: Indian Institute of Technology, Madras</li>
+                <li><strong>Start date</strong>: 1st September, 2023</li>
+                <li><strong>Course duration</strong>: 6 Months</li>
+            </ul>
+        </div>
+        <div class="portfolio-description">
+            <h2>Insights of the Course</h2>
+            <p style = "text-align: justify; text-indent: 2em;">
+                Unravel the mysteries behind one of the most iconic equations in physics with the course "Einstein's Equation Demystified: Unveiling the Secrets of E=mc²." Explore the profound implications of this equation, its connection to mass-energy equivalence, and its role in shaping our understanding of the universe.
+            </p>
+            <p style = "text-align: justify; text-indent: 2em;">
+                Demystify the equation and explore its applications, revealing the intricate connection between energy, mass, and the fabric of the universe.
+            </p>
+        </div>
+
+
+        {% elif name == "arts-3" %}
+        <div class="portfolio-info">
+            <h3>DNA Sequencing and Analysis: Decoding the Blueprint of Life</h3>
+            <ul>
+                <li><strong>Category</strong>: Biology</li>
+                <li><strong>Offered By</strong>: Indian Institute of Technology, Madras</li>
+                <li><strong>Start date</strong>: 1st September, 2023</li>
+                <li><strong>Course duration</strong>: 6 Months</li>
+            </ul>
+        </div>
+        <div class="portfolio-description">
+            <h2>Insights of the Course</h2>
+            <p style = "text-align: justify; text-indent: 2em;">
+                Embark on a captivating journey into the world of DNA sequencing and analysis in the course "DNA Sequencing and Analysis: Decoding the Blueprint of Life." Explore the fundamental principles and cutting-edge techniques used to unravel the mysteries of genetic information and gain insights into the intricate workings of life.
+            </p>
+            <p style = "text-align: justify; text-indent: 2em;">
+                Discover the methodologies and tools used to decode the blueprint of life, unlocking a deeper understanding of genetic information, heredity, and biological processes. Explore the frontiers of genomics and gain insights into the remarkable world encoded within our DNA.
+            </p>
+        </div>
+
+        {% endif %}
+{% endblock course_info %}
+

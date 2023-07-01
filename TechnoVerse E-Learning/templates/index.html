@@ -1,0 +1,758 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>TechnoVerse</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href={% static "assets/vendor/aos/aos.css" %} rel="stylesheet">
+  <link href={% static "assets/vendor/bootstrap/css/bootstrap.min.css" %} rel="stylesheet">
+  <link href={% static "assets/vendor/bootstrap-icons/bootstrap-icons.css" %} rel="stylesheet">
+  <link href={% static "assets/vendor/boxicons/css/boxicons.min.css" %} rel="stylesheet">
+  <link href={% static "assets/vendor/glightbox/css/glightbox.min.css" %} rel="stylesheet">
+  <link href={% static "assets/vendor/remixicon/remixicon.css" %} rel="stylesheet">
+  <link href={% static "assets/vendor/swiper/swiper-bundle.min.css" %} rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href={% static "assets/css/style.css" %} rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <h1><a href="index.html">TechnoVerse</a></h1>
+        <!--<a href="index.html"><img src= {% static 'assets/img/logo.png' %} alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto " href="#portfolio">Courses</a></li>
+          <li><a class="nav-link scrollto" href="#features">Explore</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          
+          <li><a class="nav-link scrollto" href="/app_auth/signout/">SignOut</a></li>
+          <li><a class="getstarted scrollto" href="#about">Welcome {{user.username}}</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+
+    <div class="container">
+      <br>
+      <div class="row">
+        <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
+          <h1 data-aos="fade-up">Explore, Learn, and Create with Technoverse!</h1>
+          <br>
+          <h2 data-aos="fade-up" data-aos-delay="400" style= "text-indent: 60px;">We are a passionate team of tech enthusiasts, industry experts, and lifelong learners, delivering high-quality content that informs, educates, and inspires.</h2>
+          <div data-aos="fade-up" data-aos-delay="800">
+            <a href="#portfolio" class="btn-get-started scrollto">Get Started</a>
+          </div>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left" data-aos-delay="200">
+          <img src= {% static "assets/img/hero-img.png" %} class="img-fluid animated" alt="">
+        </div>
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+<br>
+  <main id="main">
+
+    <!-- ======= Clients Section ======= -->
+    <section id="clients" class="clients clients">
+      <div class="container" style="padding: -10px;">
+
+        <div class="row">
+
+          <div class="col-lg-3 col-md-4 col-6">
+            <img src={% static "assets/img/colleges/logo-1.png" %} class="img-fluid" alt="" data-aos="zoom-in" style= "height: 120px; width: auto;">
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-6">
+            <img src={% static "assets/img/colleges/logo-2.png" %} class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="100" style= "height: 120px; width: auto;">
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-6">
+            <img src={% static "assets/img/colleges/logo-3.png" %} class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="200" style= "height: 120px; width: auto;">
+          </div>
+          <!--
+          <div class="col-lg-3 col-md-4 col-6">
+            <img src={% static "assets/img/colleges/logo-4.png" %} class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="300" style= "height: 150px; width: auto;">
+          </div>
+          
+          <div class="col-lg-2 col-md-4 col-6">
+            <img src={% static "assets/img/colleges/logo-5.png" %} class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="400" style= "height: 150px; width: auto;">
+          </div> -->
+
+          <div class="col-lg-3 col-md-4 col-6">
+            <img src={% static "assets/img/colleges/logo-6.png" %} class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="500" style= "height: 120px; width: auto;">
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Clients Section -->
+
+
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Featured Courses</h2>
+          <p>Unleash Your Inner Innovator with Technoverse's Handpicked Selection!</p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All Courses</li>
+              <li data-filter=".filter-app">Technology</li>
+              <li data-filter=".filter-card">Fintech</li>
+              <li data-filter=".filter-web">Humanities & Arts</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="400">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src={% static "assets/img/courses/tech-1.png" %} class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Advanced Data Visualization Techniques: Mastering Visual Storytelling</h4>
+                <p>Data Science</p>
+                <div class="portfolio-links">
+                  <a href="{% url 'course_info' name='tech-1' %}" title="More Details" name="tech-1"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src={% static "assets/img/courses/arts-3.png" %} class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>DNA Sequencing and Analysis: Decoding the Blueprint of Life</h4>
+                <p>Biology</p>
+                <div class="portfolio-links">
+                  <a href="{% url 'course_info' name='arts-3' %}" title="More Details" name="arts-3"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src={% static "assets/img/courses/tech-3.png" %} class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Blockchain Fundamentals: Understanding the Technology Behind Cryptocurrencies</h4>
+                <p>Blockchain</p>
+                <div class="portfolio-links">
+                  <a href="{% url 'course_info' name='tech-3' %}" title="More Details" name="tech-3"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src={% static "assets/img/courses/fintech-3.png" %} class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Strategic Pricing and Revenue Management: Maximizing Profitability</h4>
+                <p>Commerce</p>
+                <div class="portfolio-links">
+                  <a href="{% url 'course_info' name='fintech-3' %}" title="More Details" name="fintech-3"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src={% static "assets/img/courses/arts-2.png" %} class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Einstein's Equation Demystified: Unveiling the Secrets of E=mc²</h4>
+                <p>Physics</p>
+                <div class="portfolio-links">
+                  <a href="{% url 'course_info' name='arts-2' %}" title="More Details" name="arts-2"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src={% static "assets/img/courses/tech-2.png" %} class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Wireless Network Hacking: Exploiting and Securing Wi-Fi Networks</h4>
+                <p>Cyber Security</p>
+                <div class="portfolio-links">
+                  <a href="{% url 'course_info' name='tech-2' %}" title="More Details" name="tech-2"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src={% static "assets/img/courses/fintech-1.png" %} class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Financial Data Analysis with Python: Extracting Insights for Decision Making</h4>
+                <p>Fintech</p>
+                <div class="portfolio-links">
+                  <a href="{% url 'course_info' name='fintech-1' %}" title="More Details" name="fintech-1"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src={% static "assets/img/courses/fintech-2.png" %} class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Fintech Entrepreneurship: Building and Scaling Innovative Financial Solutions</h4>
+                <p>Fintech</p>
+                <div class="portfolio-links">
+                  <a href="{% url 'course_info' name='fintech-2' %}" title="More Details" name="fintech-2"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src={% static "assets/img/courses/arts-1.png" %} class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Advanced Calculus: Exploring the Beauty and Applications of Mathematical Analysis</h4>
+                <p>Mathematics</p>
+                <div class="portfolio-links">
+                  <a href="{% url 'course_info' name='arts-1' %}" title="More Details" name="arts-1"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+
+    <!-- ======= Features Section ======= -->
+    <section id="features" class="features">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Explore</h2>
+          <p>Expand Your Tech Horizons: Dive into the Technoverse's Vast Realm of Possibilities!</p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="300">
+          <div class="col-lg-3 col-md-4">
+            <div class="icon-box">
+              <i class="ri-store-line" style="color: #ffbb2c;"></i>
+              <h3><a href="">Marketing</a></h3>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+            <div class="icon-box">
+              <i class="ri-bar-chart-box-line" style="color: #5578ff;"></i>
+              <h3><a href="">Data Analytics</a></h3>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+            <div class="icon-box">
+              <i class="ri-calendar-todo-line" style="color: #e80368;"></i>
+              <h3><a href="">Management</a></h3>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
+            <div class="icon-box">
+              <i class="ri-paint-brush-line" style="color: #e361ff;"></i>
+              <h3><a href="">Fine Arts</a></h3>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 mt-4">
+            <div class="icon-box">
+              <i class="ri-database-2-line" style="color: #47aeff;"></i>
+              <h3><a href="">DBMS</a></h3>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 mt-4">
+            <div class="icon-box">
+              <i class="ri-gradienter-line" style="color: #ffa76e;"></i>
+              <h3><a href="">UI/UX</a></h3>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 mt-4">
+            <div class="icon-box">
+              <i class="ri-file-list-3-line" style="color: #11dbcf;"></i>
+              <h3><a href="">File Management</a></h3>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 mt-4">
+            <div class="icon-box">
+              <i class="ri-cloud-line" style="color: #4233ff;"></i>
+              <h3><a href="">Cloud Computing</a></h3>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 mt-4">
+            <div class="icon-box">
+              <i class="ri-anchor-line" style="color: #b2904f;"></i>
+              <h3><a href="">Marine Engineering</a></h3>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 mt-4">
+            <div class="icon-box">
+              <i class="ri-disc-line" style="color: #b20969;"></i>
+              <h3><a href="">Music</a></h3>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 mt-4">
+            <div class="icon-box">
+              <i class="ri-base-station-line" style="color: #ff5828;"></i>
+              <h3><a href="">Tele-Communication</a></h3>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 mt-4">
+            <div class="icon-box">
+              <i class="ri-fingerprint-line" style="color: #29cc61;"></i>
+              <h3><a href="">Cyber Security</a></h3>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Features Section -->
+
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Why  Technoverse?</h2>
+          <p>Elevate Your Tech Journey: Experience Unparalleled Solutions with Technoverse's Dynamic Services</p>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+              <div class="icon"><i class="bx bxl-dribbble"></i></div>
+              <h4 class="title"><a href="">Customized Learning Paths</a></h4>
+              <p class="description">Forge Your Future in Tech with Customized Course Selection and Progression.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+              <div class="icon"><i class="bx bx-file"></i></div>
+              <h4 class="title"><a href="">Certification & Recognition</a></h4>
+              <p class="description">Validate Your Expertise with Technoverse's Industry-Recognized Certificates of Completion.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+              <div class="icon"><i class="bx bx-tachometer"></i></div>
+              <h4 class="title"><a href="">Projects & Assessments</a></h4>
+              <p class="description">Apply Your Knowledge to Real-World Scenarios and Build a Strong Tech Skillset.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+              <div class="icon"><i class="bx bx-world"></i></div>
+              <h4 class="title"><a href="">Community & Support</a></h4>
+              <p class="description">Connect with Peers, Engage in Discussions, and Seek Guidance from Expert Instructors.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>About Us</h2>
+          <p>Our Tech Odyssey: Empowering You to Conquer the Digital Frontier</p>
+        </div>
+
+        <div class="row content">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="150">
+            <p>
+              We are a passionate team of tech enthusiasts, industry experts, and lifelong learners who are dedicated to curating and delivering high-quality content that informs, educates, and inspires. 
+            </p>
+            <ul>
+              <li><i class="ri-check-double-line"></i> Inspiring individuals to embrace the transformative power of technology.</li>
+              <li><i class="ri-check-double-line"></i> Fostering an inclusive community for learners and enthusiasts</li>
+              <li><i class="ri-check-double-line"></i> Explore and connect in the ever-evolving world of technology</li>
+            </ul>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="300">
+            <p>
+              At Technoverse, we believe that technology has the power to transform lives and shape the future. Our mission is to be your ultimate destination for all things tech-related, providing you with valuable insights, cutting-edge trends, and practical knowledge to navigate the ever-evolving world of technology.
+            </p>
+            <a href="#" class="btn-learn-more">Learn More</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
+
+
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts">
+      <div class="container">
+
+        <div class="row">
+          <div class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-xl-start" data-aos="fade-right" data-aos-delay="150">
+            <img src={% static "assets/img/counts-img.svg" %} alt="" class="img-fluid">
+          </div>
+
+          <div class="col-xl-7 d-flex align-items-stretch pt-4 pt-xl-0" data-aos="fade-left" data-aos-delay="300">
+            <div class="content d-flex flex-column justify-content-center">
+              <div class="row">
+                <div class="col-md-6 d-md-flex align-items-md-stretch">
+                  <div class="count-box">
+                    <i class="bi bi-emoji-smile"></i>
+                    <span data-purecounter-start="0" data-purecounter-end="65" data-purecounter-duration="1" class="purecounter"></span>
+                    <p><strong>Million happy learners</strong> embrace the power of technology!</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6 d-md-flex align-items-md-stretch">
+                  <div class="count-box">
+                    <i class="bi bi-journal-richtext"></i>
+                    <span data-purecounter-start="0" data-purecounter-end="12" data-purecounter-duration="1" class="purecounter"></span>
+                    <p><strong>Diverse Domains</strong> fueling the curiosity of millions of learners worldwide!</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6 d-md-flex align-items-md-stretch">
+                  <div class="count-box">
+                    <i class="bi bi-clock"></i>
+                    <span data-purecounter-start="0" data-purecounter-end="18" data-purecounter-duration="1" class="purecounter"></span>
+                    <p><strong>Years of Tech Expertise</strong> curating and delivering high-quality content that informs, educates, and inspires.</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6 d-md-flex align-items-md-stretch">
+                  <div class="count-box">
+                    <i class="bi bi-award"></i>
+                    <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
+                    <p><strong>Awards and Counting</strong> solidifying our commitment to delivering top-notch tech education and inspiration.</p>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End .content-->
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Counts Section -->
+
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials section-bg">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Testimonials</h2>
+          <p>From Learners to Tech Innovators: The Technoverse Testimonial Chronicles!</p>
+        </div>
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src={% static "assets/img/testimonials/testimonials-1.jpg" %} class="testimonial-img" alt="">
+                  <h3>Saul Goodman</h3>
+                  <h4>Ceo &amp; Founder</h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    Technoverse has been an invaluable resource on my tech learning journey. The courses are comprehensive, well-structured, and delivered by knowledgeable instructors. Thanks to Technoverse, I have expanded my skills and landed a dream job in the tech industry.
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src={% static "assets/img/testimonials/testimonials-2.jpg" %} class="testimonial-img" alt="">
+                  <h3>Sara Wilsson</h3>
+                  <h4>Designer</h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    As a tech enthusiast, I have explored various online learning platforms, but Technoverse stands out from the rest. The quality of their content is exceptional, and the range of courses across different domains is impressive. Technoverse has become my go-to platform for staying up-to-date with the latest tech trends.
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src={% static "assets/img/testimonials/testimonials-3.jpg" %} class="testimonial-img" alt="">
+                  <h3>Jena Karlis</h3>
+                  <h4>Store Owner</h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    I can't thank Technoverse enough for the immense value they provide. The platform is user-friendly, and the instructors truly go above and beyond to ensure a fantastic learning experience. The courses have helped me enhance my skills and gain confidence in tackling complex tech projects.
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src= {% static "assets/img/testimonials/testimonials-4.jpg" %} class="testimonial-img" alt="">
+                  <h3>Matt Brandon</h3>
+                  <h4>Freelancer</h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    Technoverse has been a game-changer for me. Their courses have provided me with the knowledge and skills to bring my tech startup idea to life. The practical insights and real-world examples shared throughout the courses have been instrumental in shaping my entrepreneurial journey.
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src={% static "assets/img/testimonials/testimonials-5.jpg" %} class="testimonial-img" alt="">
+                  <h3>John Larson</h3>
+                  <h4>Entrepreneur</h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    I highly recommend Technoverse to anyone looking to dive into the world of technology. The platform offers a diverse range of courses that cater to different skill levels. Whether you're a beginner or an experienced professional, Technoverse has something to offer, and their engaging content keeps you motivated to learn more.
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+
+    <!-- ======= F.A.Q Section ======= -->
+    <section id="faq" class="faq">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Frequently Asked Questions</h2>
+        </div>
+
+        <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-5">
+            <i class="ri-question-line"></i>
+            <h4>How do I enroll in a course on Technoverse?</h4>
+          </div>
+          <div class="col-lg-7">
+            <p>
+              Enrolling in a course on Technoverse is simple. Just browse our course catalog, select the course you're interested in, and click on the "Enroll" button. Follow the prompts to create an account or log in if you already have one, and complete the enrollment process.
+            </p>
+          </div>
+        </div><!-- End F.A.Q Item-->
+
+        <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-5">
+            <i class="ri-question-line"></i>
+            <h4>Can I access the courses on Technoverse from any device?</h4>
+          </div>
+          <div class="col-lg-7">
+            <p>
+              Absolutely! Technoverse is designed to be accessible from any device with an internet connection. You can access our courses from your computer, laptop, tablet, or even your smartphone. Learn on the go, at your convenience.
+            </p>
+          </div>
+        </div><!-- End F.A.Q Item-->
+
+        <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+          <div class="col-lg-5">
+            <i class="ri-question-line"></i>
+            <h4>Are there any prerequisites for the courses on Technoverse?</h4>
+          </div>
+          <div class="col-lg-7">
+            <p>
+              Prerequisites vary depending on the course. While some courses are suitable for beginners, others may require prior knowledge or experience in specific areas. Each course has a detailed description that includes information about prerequisites, so make sure to check the course requirements before enrolling.
+            </p>
+          </div>
+        </div><!-- End F.A.Q Item-->
+
+        <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+          <div class="col-lg-5">
+            <i class="ri-question-line"></i>
+            <h4>Can I earn a certificate upon completing a course on Technoverse?</h4>
+          </div>
+          <div class="col-lg-7">
+            <p>
+              Yes! Technoverse provides certificates of completion for most courses. Once you successfully finish a course, you will receive a certificate that you can showcase on your professional profile or include in your resume.
+            </p>
+          </div>
+        </div><!-- End F.A.Q Item-->
+
+        <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="500">
+          <div class="col-lg-5">
+            <i class="ri-question-line"></i>
+            <h4>How long do I have access to a course after enrolling?</h4>
+          </div>
+          <div class="col-lg-7">
+            <p>
+              Once you enroll in a course on Technoverse, you typically have unlimited access to the course materials. This allows you to learn at your own pace and revisit the content whenever you need to. However, please note that access to courses may vary based on any specific terms or duration specified for certain courses or subscriptions.
+            </p>
+          </div>
+        </div><!-- End F.A.Q Item-->
+
+      </div>
+    </section><!-- End F.A.Q Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Contact Us</h2>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-8 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="contact-about">
+              <h3>TechnoVerse</h3>
+              <p>Have a question or need assistance? Contact us today, and our friendly team will be delighted to help you</p>
+              <div class="social-links">
+                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="200">
+            <div class="info">
+              <div>
+                <i class="ri-map-pin-line"></i>
+                <p>No. 101A, Adam Street<br>Chennai, Tamil Nadu.</p>
+              </div>
+
+              <div>
+                <i class="ri-mail-send-line"></i>
+                <p>info.technoverse@outlook.com</p>
+              </div>
+
+              <div>
+                <i class="ri-phone-line"></i>
+                <p>+91 6369015407</p>
+              </div>
+
+            </div>
+          </div>
+          <!--
+          <div class="col-lg-5 col-md-12" data-aos="fade-up" data-aos-delay="300">
+            <form action="contact_us/" method="post" role="form" class="email-form" id = "contact_form">{% csrf_token %}
+              <div class="form-group">
+                <input type="text" name="contact-name" class="form-control" id="name" placeholder="Your Name" required>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" name="contact-email" id="email" placeholder="Your Email" required>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="contact-subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="contact-message" rows="5" placeholder="Message" required></textarea>
+              </div>
+
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>-->
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="row d-flex align-items-center">
+        <div class="col-lg-6 text-lg-left text-center">
+          <div class="copyright">
+            &copy; Copyright <strong>Jeswin Joseph J</strong>. All Rights Reserved
+          </div>
+          <div class="credits">
+            Designed by <a href="https://www.linkedin.com/in/jeswinjosephj">Jeswin Joseph J</a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <nav class="footer-links text-lg-right text-center pt-2 pt-lg-0">
+            <a href="#hero" class="scrollto">Home</a>
+            <a href="#about" class="scrollto">About</a>
+            <a href="#portfolio" class="scrollto">Courses</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src={% static "assets/vendor/purecounter/purecounter_vanilla.js" %}></script>
+  <script src={% static "assets/vendor/aos/aos.js" %}></script>
+  <script src={% static "assets/vendor/bootstrap/js/bootstrap.bundle.min.js" %}></script>
+  <script src={% static "assets/vendor/glightbox/js/glightbox.min.js" %}></script>
+  <script src={% static "assets/vendor/isotope-layout/isotope.pkgd.min.js" %}></script>
+  <script src={% static "assets/vendor/swiper/swiper-bundle.min.js" %}></script>
+  <script src={% static "assets/vendor/php-email-form/validate.js" %}></script>
+
+  <!-- Template Main JS File -->
+  <script src={% static "assets/js/main.js" %}></script>
+
+</body>
+
+</html>

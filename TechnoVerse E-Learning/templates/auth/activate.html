@@ -1,0 +1,18 @@
+{% autoescape off %}
+
+Dear User,
+
+    Thank you for registering with my Django project. To complete the account activation process,
+
+Please click on the activation link below:
+
+http://{{domain}}{% url 'activate' uidb64=uid token=token %}
+
+If you did not request this token or need any assistance, please contact our support team.
+
+Best regards,
+
+Jeswin Joseph J
+TechnoVerse
+
+{% endautoescape %}

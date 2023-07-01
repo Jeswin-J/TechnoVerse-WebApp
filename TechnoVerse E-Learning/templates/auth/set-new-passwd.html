@@ -1,0 +1,64 @@
+{% extends 'nav.html' %}
+
+{% block title %}
+    AispaceX | Set Password
+{% endblock title %}
+
+{% block style %}
+    <style>
+        .btn{
+            font-family: "Raleway", Sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            letter-spacing: 1px;
+            display: inline-block;
+            padding: 10px 30px;
+            border-radius: 50px;
+            transition: 0.5px;
+            color: #3498db;
+            border: 2px solid #3498db;
+        }
+
+        .btn:hover{
+            color:#fff;
+            background-color: #3498db;
+        }
+    </style>
+{% endblock style %}
+
+{% block form %}
+<section id="contact" class="contact">
+    <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+            <h1 data-aos="fade-up">Set New Password</h1>
+            <br>
+            <div class='container' data-aos='fade-up' data-aos-delay='400'>
+
+                {% for message in messages %}
+                <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+                    <strong></strong>{{ message }}
+                  </div>
+                {% endfor %}
+
+                <form action="{% url 'set-new-passwd' uidb64 token %}" method="post"> {% csrf_token %}
+                    <div class="form-group" data-aos="fade-up" data-aos-delay="600">
+                        <input type="password" class="form-control" id = "passwd1" name = "passwd1" placeholder="Password" required>
+                    </div>
+                    <br>
+                    <div class="form-group" data-aos="fade-up" data-aos-delay="600">
+                        <input type="password" class="form-control" id = "passwd2" name = "passwd2" placeholder="Confirm Password" required>
+                    </div>
+                    <br>
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="800" >
+                        <button type="submit" class="btn">Submit</button>  
+                    </div>
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="800" >
+                        <p><a href="\app_auth\signin"> <-- Go Back</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock form %}

@@ -1,0 +1,71 @@
+{% extends 'nav.html' %}
+{% load static %}
+
+{% block title %}
+    AispaceX | Reset Password
+{% endblock title %}
+
+{% block style %}
+    <style>
+        .btn{
+            font-family: "Raleway", Sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            letter-spacing: 1px;
+            display: inline-block;
+            padding: 10px 30px;
+            border-radius: 50px;
+            transition: 0.5px;
+            color: #3498db;
+            border: 2px solid #3498db;
+        }
+
+        .btn:hover{
+            color:#fff;
+            background-color: #3498db;
+        }
+    </style>
+{% endblock style %}
+
+{% block form %}
+<section id="contact" class="contact">
+    <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+            <h1 data-aos="fade-up">Reset Password</h1>
+            <br>
+            <br>
+            <br>
+            <div class='container' data-aos='fade-up' data-aos-delay='400'>
+
+                {% for message in messages %}
+                <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+                    <strong></strong>{{ message }}
+                  </div>
+                {% endfor %}
+
+                <form action="/app_auth/request-reset-email/" method="post"> {% csrf_token %}
+                    <div class="form-group" data-aos="fade-up" data-aos-delay="600">
+                        <input type="email" class="form-control" name="e-mail" id="email" placeholder="E-mail Address" required>
+                    </div>
+                    <br>
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="800" >
+                        <button type="submit" class="btn">Submit</button>  
+                    </div>
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="800" >
+                        <p><a href="\app_auth\signin"> <-- Go Back</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock form %}
+
+{% block img %}
+<div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left" data-aos-delay="200">
+    <br>
+    <br>
+    <img src= {% static "assets/img/hero-img.png" %} class="img-fluid animated" alt="">
+</div>
+{% endblock img %}
