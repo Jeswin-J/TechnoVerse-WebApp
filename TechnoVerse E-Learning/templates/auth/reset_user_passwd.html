@@ -1,8 +1,8 @@
 {% autoescape off %}
 
-Dear {{user.username}},
+Dear User,
 
-We have received a request to reset your password for your Django Project account. To proceed with the password reset, please click the link below:
+We have received a request to reset your password for your TechnoVerse account. To proceed with the password reset, please click the link below:
 
 http://{{domain}}{% url 'set-new-passwd' uidb64=uid token=token %}
 
